@@ -97,6 +97,7 @@ h1 {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2rem;
+  align-items: center;
 }
 
 .btn {
@@ -122,6 +123,12 @@ h1 {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.btn-tertiary {
+  color: var(--accent);
+  background: rgba(89, 214, 200, 0.14);
+  border: 1px solid rgba(89, 214, 200, 0.25);
+}
+
 .section {
   padding: 5rem 0;
 }
@@ -142,7 +149,7 @@ h1 {
 
 .steps-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-bottom: 1.5rem;
 }
