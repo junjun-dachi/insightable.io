@@ -187,6 +187,13 @@ h1 {
   text-align: center;
 }
 
+.download-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .info-box {
   background: rgba(89, 214, 200, 0.12);
   border: 1px solid rgba(89, 214, 200, 0.25);
