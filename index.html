@@ -34,7 +34,7 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Explore the platform</a>
             <a class="btn btn-secondary" href="#features">See how it works</a>
-            <a class="btn btn-tertiary" href="#setup">How to use it guide</a>
+            <a class="btn btn-secondary" href="#setup">How to use it after download</a>
           </div>
         </div>
       </div>
@@ -116,5 +116,28 @@
         <a class="btn btn-primary" href="mailto:hello@insightable.app">hello@insightable.app</a>
       </section>
     </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const heroButtons = document.querySelectorAll('.hero-actions .btn');
+
+        const setActiveButton = (activeButton) => {
+          heroButtons.forEach((button) => {
+            button.classList.remove('btn-primary');
+            button.classList.add('btn-secondary');
+          });
+
+          activeButton.classList.remove('btn-secondary');
+          activeButton.classList.add('btn-primary');
+        };
+
+        heroButtons.forEach((button) => {
+          button.addEventListener('click', () => setActiveButton(button));
+        });
+
+        if (heroButtons.length) {
+          setActiveButton(heroButtons[0]);
+        }
+      });
+    </script>
   </body>
 </html>
