@@ -210,8 +210,10 @@ h1 {
 }
 
 .download-card {
-  display: block;
-  padding: 1rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.35rem;
   border-radius: 999px;
   text-decoration: none;
   color: var(--text);
@@ -219,12 +221,12 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.12);
   text-align: center;
   font-weight: 700;
-  transition: background 180ms ease, transform 180ms ease;
+  transition: transform 180ms ease, background 180ms ease;
 }
 
 .download-card:hover {
+  transform: translateY(-2px);
   background: rgba(89, 214, 200, 0.16);
-  transform: translateY(-1px);
 }
 
 .download-card h3 {
