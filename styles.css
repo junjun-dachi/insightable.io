@@ -50,6 +50,12 @@ img {
   text-transform: uppercase;
 }
 
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .nav-link {
   color: var(--muted);
   text-decoration: none;
@@ -187,11 +193,46 @@ h1 {
   text-align: center;
 }
 
-.download-links {
-  display: flex;
-  flex-wrap: wrap;
+.section-copy {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.download-grid {
+  display: grid;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.download-card {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.download-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(89, 214, 200, 0.35);
+}
+
+.download-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.download-card p {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.download-card span {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .info-box {
@@ -213,6 +254,7 @@ h1 {
 @media (max-width: 780px) {
   .card-grid,
   .steps-grid,
+  .download-grid,
   .split {
     grid-template-columns: 1fr;
   }
